@@ -30,3 +30,10 @@ Route::prefix('admin')->namespace('Login')->group(function () {
     Route::post('register', 'AdminController@register');//管理员注册
     Route::post('logout', 'AdminController@logout');//注销
 });//cwp
+
+Route::prefix('pdp')->namespace('AllTest')->group(function () {
+    Route::post('pdptotest', 'PdpController@pdpToTest');//pdp测试
+});//yjx
+Route::prefix('hld')->namespace('AllTest')->group(function () {
+    Route::post('hldtotest', 'HldController@hldToTest');//hld测试
+});//yjx

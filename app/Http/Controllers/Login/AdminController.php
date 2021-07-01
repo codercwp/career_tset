@@ -31,7 +31,6 @@ class AdminController extends Controller
             json_fail('注册失败!', $arr, 100);
     }
 
-
     protected static function respondWithToken($token, $msg)
     {
         return json_success($msg, array(

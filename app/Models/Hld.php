@@ -61,5 +61,10 @@ class Hld extends Model
             return false;
         }
     }
+    public static  function  yjx_return($request){
+        $id=$request['id'];
+        $a=self::select('user_id')->where('user_id',$id)->get();
+        dd($a);
+    }
 
 }

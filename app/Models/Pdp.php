@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Pdp extends Model
 {
@@ -13,6 +14,7 @@ class Pdp extends Model
     protected $guarded = [];
 
     public static function yjx_find($param)
+
     {
         try {
             return self::select('user_id')->where('user_id',$param['id'])->count();

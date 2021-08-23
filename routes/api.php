@@ -31,6 +31,7 @@ Route::prefix('admin')->namespace('Login')->group(function () {
     Route::post('logout', 'AdminController@logout');//注销
 });//cwp
 
+
 Route::prefix('hld')->namespace('AllTest')->group(function () {
     Route::get('hldpeople', 'HldController@getHldPeople');//查询霍兰德测试中的不同类型人数分布
     Route::get('hldage', 'HldController@getHldAge');//查询霍兰德测试中的不同类型中不同年龄分布
@@ -39,3 +40,12 @@ Route::prefix('hld')->namespace('AllTest')->group(function () {
     Route::get('detailed','HldController@detailed');//查询用户详细资料
     Route::get('hldselect','HldController@hldSelect');//通过用户姓名或手机号查询霍兰德测试结果
 });//zqz
+
+Route::prefix('pdp')->namespace('AllTest')->group(function () {
+    Route::post('pdptotest', 'PdpController@pdpToTest');//pdp测试
+});//yjx
+Route::prefix('hld')->namespace('AllTest')->group(function () {
+    Route::post('hldtotest', 'HldController@hldToTest');//hld测试
+    Route::get('hldtoreturn', 'HldController@hldToReturn');//hld测试返回结果
+});//yjx
+

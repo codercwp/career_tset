@@ -36,4 +36,5 @@ Route::prefix('pdp')->namespace('AllTest')->group(function () {
 });//yjx
 Route::prefix('hld')->namespace('AllTest')->group(function () {
     Route::post('hldtotest', 'HldController@hldToTest');//hld测试
+    Route::get('hldtoreturn', 'HldController@hldToReturn');//hld测试返回结果
 });//yjx

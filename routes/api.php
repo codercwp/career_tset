@@ -32,6 +32,12 @@ Route::prefix('admin')->namespace('Login')->group(function () {
 });//cwp
 
 
+Route::prefix('user')->namespace('AllTest')->group(function () {
+    Route::post('addinfo', 'TemperController@addInfo');//信息填写
+});//hk
+Route::prefix('temperament')->namespace('AllTest')->group(function () {
+    Route::post('mouldresults', 'TemperController@mouldResults');//气质测评结果
+});//hk
 Route::prefix('hld')->namespace('AllTest')->group(function () {
     Route::get('hldpeople', 'HldController@getHldPeople');//查询霍兰德测试中的不同类型人数分布
     Route::get('hldage', 'HldController@getHldAge');//查询霍兰德测试中的不同类型中不同年龄分布
@@ -48,4 +54,5 @@ Route::prefix('hld')->namespace('AllTest')->group(function () {
     Route::post('hldtotest', 'HldController@hldToTest');//hld测试
     Route::get('hldtoreturn', 'HldController@hldToReturn');//hld测试返回结果
 });//yjx
+
 

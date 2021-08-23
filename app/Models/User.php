@@ -43,4 +43,22 @@ class User extends \Illuminate\Foundation\Auth\User implements JWTSubject,Authen
             return false;
         }
     }
+
+
+    public static function hk_addinfo($param)
+    {
+        try {
+                return self::where('id', $param['id'])->update([
+                    'age' => $param['age'],
+                    'gender' => $param['gender'],
+                    'education' => $param['education'],
+                    'retired_time' => $param['retired_time'],
+                    'retired_way' => $param['retired_way'],
+                    'work' => $param['work']
+                ]);
+        } catch (\Exception $e) {
+            logError("用户填写失败！", [$e->getMessage()]);
+            return false;
+        }
+    }
 }

@@ -30,3 +30,11 @@ Route::prefix('admin')->namespace('Login')->group(function () {
     Route::post('register', 'AdminController@register');//管理员注册
     Route::post('logout', 'AdminController@logout');//注销
 });//cwp
+
+
+Route::prefix('user')->namespace('AllTest')->group(function () {
+    Route::post('addinfo', 'TemperController@addInfo');//信息填写
+});//hk
+Route::prefix('temperament')->namespace('AllTest')->group(function () {
+    Route::post('mouldresults', 'TemperController@mouldResults');//气质测评结果
+});//hk
